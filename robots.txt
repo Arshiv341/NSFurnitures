@@ -1,0 +1,5 @@
+# Robots.txt for NS Furniture
+User-agent: *
+Allow: /
+
+Sitemap: https://nsfurniture.in/sitemap.xml
