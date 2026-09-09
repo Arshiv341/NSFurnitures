@@ -661,6 +661,11 @@ function initBusinessCredentials() {
  * 4. JSON-LD Dynamic Schema Injections for SEO
  */
 function injectStructuredData() {
+  // If static JSON-LD is already present in the document head, avoid injecting duplicate schema
+  if (document.querySelector('script[type="application/ld+json"]')) {
+    return;
+  }
+
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
